@@ -3,9 +3,6 @@ name: Deploy portfolio to GitHub Pages
 on:
   push:
     branches: [main]
-    paths:
-      - "portfolio-site.zip"
-      - "Liu_Siwu_Portfolio_Site_v1.zip"
   workflow_dispatch:
 
 permissions:
@@ -34,12 +31,16 @@ jobs:
           mkdir -p public extracted
           if [ -f "Liu_Siwu_Portfolio_Site_v1.zip" ]; then
             ARCHIVE="Liu_Siwu_Portfolio_Site_v1.zip"
+          elif [ -f "Liu_Siwu_Portfolio_Site_v1 (1).zip" ]; then
+            ARCHIVE="Liu_Siwu_Portfolio_Site_v1 (1).zip"
           elif [ -f "portfolio-site.zip" ]; then
             ARCHIVE="portfolio-site.zip"
           else
-            echo "::error::Upload the downloaded website ZIP to the repository root."
+            echo "::error::Could not find the portfolio ZIP in the repository root."
+            ls -la
             exit 1
           fi
+          echo "Using archive: $ARCHIVE"
           unzip -q "$ARCHIVE" -d extracted
           SITE_DIR="extracted/Liu_Siwu_Portfolio_Site"
           if [ ! -f "$SITE_DIR/index.html" ]; then
