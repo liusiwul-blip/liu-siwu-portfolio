@@ -1,13 +1,13 @@
 # Liu Siwu (Mc) — Interior Design Portfolio
 
-This repository hosts the static portfolio website for GitHub Pages.
+This repository hosts the static portfolio website with GitHub Pages.
 
-## Publish the current portfolio archive
+## Publish the optimized edition
 
-1. Download `Liu_Siwu_Portfolio_Site_v1.zip` from the ChatGPT conversation.
-2. In this repository, choose **Add file → Upload files** and upload the ZIP to the repository root. Keep the filename `Liu_Siwu_Portfolio_Site_v1.zip` (or use `portfolio-site.zip`). Commit the upload to `main`.
-3. Before the first deployment, open **Settings → Pages → Build and deployment → Source**, and select **GitHub Actions**.
-4. The workflow at `.github/workflows/deploy.yml` will unpack the site and publish it. Open **Actions** and wait for **Deploy portfolio to GitHub Pages** to finish successfully.
-5. The public site will use `https://liusiwul-blip.github.io/liu-siwu-portfolio/` once the first deployment succeeds.
+1. Download the archive `Liu_Siwu_Portfolio_Optimized_v2.zip` from the ChatGPT conversation.
+2. In this repository, choose **Add file → Upload files** and upload the ZIP to the repository root, keeping the exact filename `Liu_Siwu_Portfolio_Optimized_v2.zip`.
+3. Commit the upload to `main`. The GitHub Actions workflow prioritizes this archive and will unpack its `Liu_Siwu_Portfolio_Site/` folder for publication.
+4. Open **Actions** and confirm **Deploy portfolio to GitHub Pages** finishes successfully.
+5. The public site URL is `https://liusiwul-blip.github.io/liu-siwu-portfolio/` after a successful Pages deployment.
 
-The ZIP contains the site files and local image assets. Do not upload only the ZIP and expect GitHub Pages to show it directly; the included workflow unpacks it during deployment.
+If you want to publish the previous version again, remove or rename the optimized archive so the workflow will fall back to the older archive names.
