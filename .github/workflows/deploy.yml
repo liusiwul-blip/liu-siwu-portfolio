@@ -29,7 +29,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p public extracted
-          if [ -f "Liu_Siwu_Portfolio_Site_v1.zip" ]; then
+          if [ -f "Liu_Siwu_Portfolio_Optimized_v2.zip" ]; then
+            ARCHIVE="Liu_Siwu_Portfolio_Optimized_v2.zip"
+          elif [ -f "Liu_Siwu_Portfolio_Site_v1.zip" ]; then
             ARCHIVE="Liu_Siwu_Portfolio_Site_v1.zip"
           elif [ -f "Liu_Siwu_Portfolio_Site_v1 (1).zip" ]; then
             ARCHIVE="Liu_Siwu_Portfolio_Site_v1 (1).zip"
