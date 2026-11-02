@@ -51,6 +51,10 @@ jobs:
             exit 1
           fi
           cp -R "$SITE_DIR"/. public/
+          if [ -f "index.html" ]; then
+            echo "Overlaying the latest user-provided index.html"
+            cp "index.html" public/index.html
+          fi
           test -f public/index.html
           echo "Portfolio files prepared:"
           find public -maxdepth 2 -type f | head -80
