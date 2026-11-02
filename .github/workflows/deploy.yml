@@ -55,6 +55,11 @@ jobs:
             echo "Overlaying the latest user-provided index.html"
             cp "index.html" public/index.html
           fi
+          if [ -d "liu-siwu" ]; then
+            echo "Adding Liu Siwu named URL alias"
+            mkdir -p public/liu-siwu
+            cp -R "liu-siwu/." public/liu-siwu/
+          fi
           test -f public/index.html
           echo "Portfolio files prepared:"
           find public -maxdepth 2 -type f | head -80
