@@ -1,13 +1,11 @@
 # Liu Siwu (Mc) — Interior Design Portfolio
 
-This repository hosts the static portfolio website with GitHub Pages.
+## Public portfolio
 
-## Publish the optimized edition
+Main public portfolio: https://4makdus1w8jqb.doubao.link/app/app_17h8vc5ehjt
 
-1. Download the archive `Liu_Siwu_Portfolio_Optimized_v2.zip` from the ChatGPT conversation.
-2. In this repository, choose **Add file → Upload files** and upload the ZIP to the repository root, keeping the exact filename `Liu_Siwu_Portfolio_Optimized_v2.zip`.
-3. Commit the upload to `main`. The GitHub Actions workflow prioritizes this archive and will unpack its `Liu_Siwu_Portfolio_Site/` folder for publication.
-4. Open **Actions** and confirm **Deploy portfolio to GitHub Pages** finishes successfully.
-5. The public site URL is `https://liusiwul-blip.github.io/liu-siwu-portfolio/` after a successful Pages deployment.
+GitHub Pages address (redirects to the main portfolio): https://liusiwul-blip.github.io/liu-siwu-portfolio/
 
-If you want to publish the previous version again, remove or rename the optimized archive so the workflow will fall back to the older archive names.
+## Source files
+
+The repository retains the earlier website source archive and supporting assets. The root `index.html` is a lightweight redirect page so visitors using the GitHub Pages address are forwarded to the Doubao-hosted portfolio.
